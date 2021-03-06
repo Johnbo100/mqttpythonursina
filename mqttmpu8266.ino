@@ -110,6 +110,15 @@ void loop()
     topublish +=  String(g.gyro.y).c_str();
     topublish += " ";
     topublish +=  String(g.gyro.z).c_str();
+    topublish += " ";
+    topublish +=  String(a.acceleration.x).c_str();
+    topublish += " ";
+    topublish +=  String(a.acceleration.y).c_str();
+    topublish += " ";
+    topublish +=  String(a.acceleration.z).c_str();
+   
+   
+ 
     client.publish("gyroX", String(topublish).c_str());
     //client.publish("gyroY", String(g.gyro.y).c_str());
     //client.publish("gyroZ", String(g.gyro.z).c_str());
@@ -117,6 +126,11 @@ void loop()
     Serial.println(g.gyro.x);
     Serial.println(g.gyro.y);
     Serial.println(g.gyro.z);
+    Serial.println(a.acceleration.x);
+    Serial.println(a.acceleration.y);
+    Serial.println(topublish);
+    
+    
     
   }
 }
